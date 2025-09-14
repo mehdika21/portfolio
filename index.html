@@ -154,9 +154,9 @@
 
       <!-- Center - Navigation menu -->
       <div class="hidden md:flex items-center gap-8">
-        <a href="#projects" class="text-sm text-slate-300 hover:text-[var(--teal)] transition-colors font-medium">Islands Discovered</a>
+        <a href="#projects" class="text-sm text-slate-300 hover:text-[var(--teal)] transition-colors font-medium">Project</a>
         <a href="#experience" class="text-sm text-slate-300 hover:text-[var(--teal)] transition-colors font-medium">Captain's Log</a>
-        <a href="#skills" class="text-sm text-slate-300 hover:text-[var(--teal)] transition-colors font-medium">Crew Skills</a>
+        <a href="#skills" class="text-sm text-slate-300 hover:text-[var(--teal)] transition-colors font-medium">Skills</a>
       </div>
 
       <!-- Right side - Language selector + Gear Second -->
@@ -167,9 +167,9 @@
 
 
         <!-- fun toggle -->
-        <button id="gear" class="ms-3 px-3 py-1 rounded chip hover:border-[var(--gum)] hover:text-[var(--gum)] transition">
+        <!-- <button id="gear" class="ms-3 px-3 py-1 rounded chip hover:border-[var(--gum)] hover:text-[var(--gum)] transition">
           Gear Second
-        </button>
+        </button> -->
       </div>
 
       <!-- Mobile menu button -->
@@ -204,8 +204,7 @@
 
   <!-- PROJECTS -->
 <section id="projects" class="max-w-6xl mx-auto px-4 py-16">
-  <h2 class="text-2xl font-semibold">Islands Discovered</h2>
-  <p class="text-slate-400 text-sm mt-1">Sélection de projets avec aperçu et détails.</p>
+  <h2 class="text-2xl font-semibold">Projects</h2>
 
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
     <!-- CARD — Suivi médical scolaire -->
@@ -238,7 +237,7 @@
 
     <!-- CARD — ShareElec -->
     <article class="relative group rounded-xl overflow-hidden border border-white/5 bg-slate-900/40">
-      <img src="image.png"
+      <img src="/images/shareElec/firstPage.png"
            alt="ShareElec — aperçu"
            class="w-full aspect-[16/9] object-cover" />
       <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
@@ -366,24 +365,25 @@
       <div class="space-y-3" data-gallery>
         <div class="relative aspect-video bg-slate-800/40 rounded-lg overflow-hidden">
           <img data-gallery-main class="h-full w-full object-cover"
-               alt="Captures ShareElec"
-               src="https://placehold.co/960x540/png?text=ShareElec+1" />
-          <button class="absolute left-2 top-1/2 -translate-y-1/2 rounded-lg bg-black/40 hover:bg-black/60 p-2" data-gallery-prev>❮</button>
-          <button class="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg bg-black/40 hover:bg-black/60 p-2" data-gallery-next>❯</button>
+               alt="ShareElec - Page d'accueil"
+               src="/images/shareElec/firstPage.png" />
+          <button class="absolute left-2 top-1/2 -translate-y-1/2 rounded-lg bg-black/40 hover:bg-black/60 p-2"
+                  data-gallery-prev aria-label="Previous">❮</button>
+          <button class="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg bg-black/40 hover:bg-black/60 p-2"
+                  data-gallery-next aria-label="Next">❯</button>
         </div>
-        <div class="flex gap-2 overflow-x-auto pb-1" data-gallery-thumbs>
-          <button class="h-16 aspect-video rounded-md overflow-hidden ring-2 ring-transparent data-[active=true]:ring-[var(--teal)]" data-thumb data-src="https://placehold.co/960x540/png?text=ShareElec+1">
-            <img class="h-full w-full object-cover" src="https://placehold.co/192x108/png?text=1" alt="">
+        <!-- Hidden images for gallery -->
+        <div class="hidden">
+          <img data-thumb data-src="/images/shareElec/firstPage.png" alt="Page d'accueil">
+          <img data-thumb data-src="/images/shareElec/secondPage.png" alt="Deuxième page">
+          <img data-thumb data-src="/images/shareElec/profilePage.png" alt="Page de profil">
           </button>
-          <button class="h-16 aspect-video rounded-md overflow-hidden ring-2 ring-transparent data-[active=true]:ring-[var(--teal)]" data-thumb data-src="https://placehold.co/960x540/png?text=ShareElec+2">
-            <img class="h-full w-full object-cover" src="https://placehold.co/192x108/png?text=2" alt="">
-          </button>
-          <button class="h-16 aspect-video rounded-md overflow-hidden ring-2 ring-transparent data-[active=true]:ring-[var(--teal)]" data-thumb data-src="https://placehold.co/960x540/png?text=ShareElec+3">
+          <!-- <button class="h-16 aspect-video rounded-md overflow-hidden ring-2 ring-transparent data-[active=true]:ring-[var(--teal)]" data-thumb data-src="https://placehold.co/960x540/png?text=ShareElec+3">
             <img class="h-full w-full object-cover" src="https://placehold.co/192x108/png?text=3" alt="">
           </button>
           <button class="h-16 aspect-video rounded-md overflow-hidden ring-2 ring-transparent data-[active=true]:ring-[var(--teal)]" data-thumb data-src="https://placehold.co/960x540/png?text=ShareElec+4">
             <img class="h-full w-full object-cover" src="https://placehold.co/192x108/png?text=4" alt="">
-          </button>
+          </button> -->
         </div>
       </div>
 
@@ -449,8 +449,7 @@
 
   <!-- SKILLS -->
   <section id="skills" class="max-w-5xl mx-auto px-4 py-16">
-    <h2 class="text-2xl font-semibold">Crew Skills</h2>
-    <p class="text-slate-400 text-sm mt-1">Devil Fruit–free, 100% earned.</p>
+    <h2 class="text-2xl font-semibold">Skills</h2>
     <div class="grid gap-6 md:grid-cols-3 mt-8">
       <!-- FRONTEND -->
       <div class="skill-card p-6">
@@ -469,7 +468,7 @@
           <div class="skill-pill">TypeScript</div>
           <div class="skill-pill">React</div>
           <div class="skill-pill">Angular.js</div>
-          <div class="skill-pill">Tailwind CSS</div>
+          <div class="skill-pill">Tailwind</div>
           <div class="skill-pill">Bootstrap</div>
         </div>
       </div>
@@ -490,6 +489,7 @@
           <div class="skill-pill">Express</div>
           <div class="skill-pill">.NET</div>
           <div class="skill-pill">MySQL</div>
+          <div class="skill-pill">php</div>
         </div>
       </div>
 
@@ -642,7 +642,7 @@
   // Year
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Gear Second fun
+  <!-- // Gear Second fun
   const gearBtn = document.getElementById('gear');
   let gearOn = false;
   if (gearBtn) {
@@ -655,7 +655,7 @@
       const h1 = document.querySelector('h1');
       if (h1) { h1.classList.add('glow-gum'); setTimeout(()=>h1.classList.remove('glow-gum'), 1600); }
     });
-  }
+  } -->
 
   // Nav glass intensifies on scroll
   const nav = document.getElementById('nav');
@@ -710,7 +710,7 @@
       '#skills .skill-card:nth-of-type(3) h3': 'Languages',
 
       // CONTACT/FOOTER
-      '#contact h2': 'Message in a Bottle',
+      '#contact h2': 'Get In Touch',
       '#contact p.text-xs': '© <span id="year"></span> Mehdi Kaidi. "Ill find the One Piece"… of clean code.'
     },
     fr: {
@@ -757,7 +757,7 @@
       '#skills .skill-card:nth-of-type(3) h3': 'Langages',
 
       // CONTACT/FOOTER
-      '#contact h2': 'Message dans une bouteille',
+      '#contact h2': 'Contactez-moi',
       '#contact p.text-xs': '© <span id="year"></span> Mehdi Kaidi. « Je trouverai lUnique Pièce »… de clean code.'
     }
   };
