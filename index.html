@@ -319,23 +319,15 @@
         <div class="relative aspect-video bg-slate-800/40 rounded-lg overflow-hidden">
           <img data-gallery-main class="h-full w-full object-cover"
                alt="Captures V2V"
-               src="https://placehold.co/960x540/png?text=V2V+1" />
-          <button class="absolute left-2 top-1/2 -translate-y-1/2 rounded-lg bg-black/40 hover:bg-black/60 p-2" data-gallery-prev>❮</button>
-          <button class="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg bg-black/40 hover:bg-black/60 p-2" data-gallery-next>❯</button>
+               src="/images/v2v/V2V.png" />
+          <button class="absolute left-2 top-1/2 -translate-y-1/2 rounded-lg bg-black/40 hover:bg-black/60 p-2" 
+                  data-gallery-prev aria-label="Previous">❮</button>
+          <button class="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg bg-black/40 hover:bg-black/60 p-2" 
+                  data-gallery-next aria-label="Next">❯</button>
         </div>
-        <div class="flex gap-2 overflow-x-auto pb-1" data-gallery-thumbs>
-          <button class="h-16 aspect-video rounded-md overflow-hidden ring-2 ring-transparent data-[active=true]:ring-[var(--teal)]"
-                  data-thumb data-src="https://placehold.co/960x540/png?text=V2V+1">
-            <img class="h-full w-full object-cover" src="https://placehold.co/192x108/png?text=1" alt="">
-          </button>
-          <button class="h-16 aspect-video rounded-md overflow-hidden ring-2 ring-transparent data-[active=true]:ring-[var(--teal)]"
-                  data-thumb data-src="https://placehold.co/960x540/png?text=V2V+2">
-            <img class="h-full w-full object-cover" src="https://placehold.co/192x108/png?text=2" alt="">
-          </button>
-          <button class="h-16 aspect-video rounded-md overflow-hidden ring-2 ring-transparent data-[active=true]:ring-[var(--teal)]"
-                  data-thumb data-src="https://placehold.co/960x540/png?text=V2V+3">
-            <img class="h-full w-full object-cover" src="https://placehold.co/192x108/png?text=3" alt="">
-          </button>
+        <!-- Hidden images for gallery -->
+        <div class="hidden">
+          <img data-thumb data-src="/images/v2v/V2V.png" alt="V2V Simulation Interface">
         </div>
       </div>
 
