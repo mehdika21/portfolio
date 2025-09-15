@@ -74,11 +74,28 @@
     }
     .skill-pill{
       border:1px solid rgba(148,163,184,.35);
-      background:rgba(15,23,42,.6);
+      background:rgba(30,30,30,.6); /* Changed from rgba(15,23,42,.6) */
       border-radius:10px;
       padding:.6rem 1rem;
       text-align:center;
       font-weight:700;
+      transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease; /* Added for smooth transition */
+      color: inherit; /* Ensure text color is inherited by default */
+    }
+    .skill-pill:hover{
+      background-color: var(--teal); /* New hover background */
+      border-color: var(--teal);     /* New hover border */
+      color: #1E1E1E;               /* New hover text color for contrast */
+    }
+
+
+        /* MK glow effect */
+    .glow-mk {
+      text-shadow: 0 0 8px rgba(242,193,78,.4), 0 0 16px rgba(59,163,169,.3); /* subtle glow using straw and teal */
+      transition: text-shadow 0.3s ease-in-out;
+    }
+    .glow-mk:hover {
+      text-shadow: 0 0 12px rgba(242,193,78,.7), 0 0 24px rgba(59,163,169,.5); /* stronger glow on hover */
     }
 
   /* Center all section titles for a consistent layout */
@@ -147,16 +164,20 @@
             <rect x="50" y="19" width="20" height="4" fill="var(--gum)"/>
           </g>
         </svg>
-        <span class="font-bold text-lg text-transparent bg-clip-text bg-gradient-to-r from-[var(--straw)] via-[var(--gold)] to-[var(--teal)]">
-          Explorer's Logbook
+        <span class="font-extrabold text-xl sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[var(--straw)] via-[var(--gold)] to-[var(--teal)] glow-mk">
+          MK
         </span>
+        <!-- <span class="font-bold text-lg text-transparent bg-clip-text bg-gradient-to-r from-[var(--straw)] via-[var(--gold)] to-[var(--teal)]">
+          Explorer's Logbook
+        </span> -->
       </div>
 
       <!-- Center - Navigation menu -->
       <div class="hidden md:flex items-center gap-8">
-        <a href="#projects" class="text-sm text-slate-300 hover:text-[var(--teal)] transition-colors font-medium">Islands Discovered</a>
-        <a href="#experience" class="text-sm text-slate-300 hover:text-[var(--teal)] transition-colors font-medium">Captain's Log</a>
+        <a href="#projects" class="text-sm text-slate-300 hover:text-[var(--teal)] transition-colors font-medium">Projects</a>
+        <!-- <a href="#experience" class="text-sm text-slate-300 hover:text-[var(--teal)] transition-colors font-medium">Captain's Log</a> -->
         <a href="#skills" class="text-sm text-slate-300 hover:text-[var(--teal)] transition-colors font-medium">Skills</a>
+        <a href="#contact" class="text-sm text-slate-300 hover:text-[var(--teal)] transition-colors font-medium">Contact</a>
       </div>
 
       <!-- Right side - Language selector + Gear Second -->
@@ -167,9 +188,9 @@
 
 
         <!-- fun toggle -->
-        <button id="gear" class="ms-3 px-3 py-1 rounded chip hover:border-[var(--gum)] hover:text-[var(--gum)] transition">
+        <!-- <button id="gear" class="ms-3 px-3 py-1 rounded chip hover:border-[var(--gum)] hover:text-[var(--gum)] transition">
           Gear Second
-        </button>
+        </button> -->
       </div>
 
       <!-- Mobile menu button -->
@@ -204,7 +225,7 @@
 
   <!-- PROJECTS -->
 <section id="projects" class="max-w-6xl mx-auto px-4 py-16">
-  <h2 class="text-2xl font-semibold">Islands Discovered</h2>
+  <h2 class="text-2xl font-semibold">Projects</h2>
   <p class="text-slate-400 text-sm mt-1">Sélection de projets avec aperçu et détails.</p>
 
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
@@ -309,7 +330,7 @@
         <div class="mt-5 flex flex-wrap gap-2 text-xs">
           <span class="px-2 py-1 bg-white/5 rounded">php</span>
           <span class="px-2 py-1 bg-white/5 rounded">d3.js</span>
-          <span class="px-2 py-1 bg-white/5 rounded">Tailwind CSS</span>
+          <span class="px-2 py-1 bg-white/5 rounded">Tailwind</span>
           <span class="px-2 py-1 bg-white/5 rounded">MySQL</span>
           <span class="px-2 py-1 bg-white/5 rounded">chart.js</span>
         </div>
@@ -783,9 +804,9 @@
   const t = {
     en: {
       // NAV
-      '#nav a[href="#projects"]': 'Islands Discovered',
-      '#nav a[href="#experience"]': "Captain's Log",
-      '#nav a[href="#skills"]': 'Crew Skills',
+      '#nav a[href="#projects"]': 'Projects',
+      '#nav a[href="#skills"]': 'Skills',
+      '#nav a[href="#contact"]': 'Contact',
 
       // HERO
       'section:nth-of-type(1) p.uppercase': 'Setting Sail for the Grand Line',
@@ -794,18 +815,8 @@
       'section:nth-of-type(1) a[href="#projects"]': 'View Projects',
       'section:nth-of-type(1) a[href="#contact"]': 'Get in touch',
 
-      // CREW
-      '#crew h2': 'Crew Spotlight',
-      '#crew p.text-slate-400': 'Fave characters that fuel the journey.',
-      '#crew article:nth-of-type(1) h3': 'Portgas D. Ace',
-      '#crew article:nth-of-type(1) p': "Passion + resilience. I channel Ace's intensity into performance-focused backend code and clean APIs.",
-      '#crew article:nth-of-type(2) h3': 'Sanji',
-      '#crew article:nth-of-type(2) p': "Elegance + craft. Like plating a fine dish, I obsess over UX polish and tasteful UI details.",
-      '#crew article:nth-of-type(3) h3': 'Monkey D. Luffy',
-      '#crew article:nth-of-type(3) p': "Curiosity + courage. I prototype fast, stretch ideas, and iterate until it <em>feels</em> right.",
-
       // PROJECTS
-      '#projects h2': 'Islands Discovered',
+      '#projects h2': 'Projects',
       '#projects p.text-slate-400': 'Selected projects with code and live demos.',
       '#projects article:nth-of-type(1) h3': 'DB Viewer',
       '#projects article:nth-of-type(1) p.mt-3': 'Lightweight Express app that exposes REST endpoints and EJS pages for a relational schema.',
@@ -818,8 +829,7 @@
       '#experience h2': "Captain's Log",
 
       // SKILLS
-      '#skills h2': 'Crew Skills',
-      '#skills p.text-slate-400': 'Devil Fruit–free, 100% earned.',
+      '#skills h2': 'Skills',
       '#skills .skill-card:nth-of-type(1) h3': 'Frontend',
       '#skills .skill-card:nth-of-type(2) h3': 'Backend',
       '#skills .skill-card:nth-of-type(3) h3': 'Languages',
@@ -830,9 +840,9 @@
     },
     fr: {
       // NAV
-      '#nav a[href="#projects"]': 'Îles découvertes',
-      '#nav a[href="#experience"]': 'Journal du capitaine',
-      '#nav a[href="#skills"]': 'Compétences de léquipage',
+      '#nav a[href="#projects"]': 'Projects',
+      '#nav a[href="#skills"]': 'Skills',
+      '#nav a[href="#contact"]': 'Contact',
 
       // HERO
       'section:nth-of-type(1) p.uppercase': 'Cap vers la Route de tous les Périls',
@@ -841,18 +851,9 @@
       'section:nth-of-type(1) a[href="#projects"]': 'Voir les projets',
       'section:nth-of-type(1) a[href="#contact"]': 'Me contacter',
 
-      // CREW
-      '#crew h2': 'Mise à lhonneur de léquipage',
-      '#crew p.text-slate-400': 'Mes personnages favoris qui minspirent.',
-      '#crew article:nth-of-type(1) h3': 'Portgas D. Ace',
-      '#crew article:nth-of-type(1) p': "Passion + résilience. J'injecte l'intensité d'Ace dans des backends performants et des APIs propres.",
-      '#crew article:nth-of-type(2) h3': 'Sanji',
-      '#crew article:nth-of-type(2) p': "Élégance + savoir-faire. Comme un plat bien dressé, je soigne l'UX et les détails du design.",
-      '#crew article:nth-of-type(3) h3': 'Monkey D. Luffy',
-      '#crew article:nth-of-type(3) p': "Curiosité + courage. Je prototype vite, j'étire les idées et j'itère jusqu'à ce que ce soit <em>juste</em>.",
-
+ 
       // PROJECTS
-      '#projects h2': 'Îles découvertes',
+      '#projects h2': 'Projects',
       '#projects p.text-slate-400': 'Projets sélectionnés avec code et démos.',
       '#projects article:nth-of-type(1) h3': 'DB Viewer',
       '#projects article:nth-of-type(1) p.mt-3': 'App Express légère qui expose des endpoints REST et des pages EJS pour un schéma relationnel.',
@@ -861,12 +862,10 @@
       '#projects article:nth-of-type(2) p.mt-3': 'Dashboard piloté par les métriques pour la qualité des données (import CSV).',
       '#projects article:nth-of-type(2) a:hover': 'En ligne',
 
-      // EXPERIENCE
-      '#experience h2': 'Journal du capitaine',
+
 
       // SKILLS
-      '#skills h2': 'Compétences de léquipage',
-      '#skills p.text-slate-400': 'Sans Fruit du Démon — 100% mérité.',
+      '#skills h2': 'Skills',
       '#skills .skill-card:nth-of-type(1) h3': 'Frontend',
       '#skills .skill-card:nth-of-type(2) h3': 'Backend',
       '#skills .skill-card:nth-of-type(3) h3': 'Langages',
