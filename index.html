@@ -205,36 +205,53 @@
  <!-- HERO -->
 <!-- HERO -->
 <section class="relative">
-  <div class="absolute inset-0 wave-divider pointer-events-none"></div>
-  <div class="max-w-6xl mx-auto px-4 pt-16 pb-20">
-    <div class="grid lg:grid-cols-2 gap-10 items-center">
-      <!-- Left: Photo with Creative Background -->
-      <div class="flex justify-center lg:justify-end order-2 lg:order-1">
+  <div class="max-w-6xl mx-auto px-4 pt-20 pb-24">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left: Text Content -->
+      <div class="space-y-6">
+        <p class="uppercase tracking-[.2em] text-xs text-slate-400">Setting Sail for the Grand Line</p>
+        <h1 class="text-4xl sm:text-6xl font-semibold leading-tight">
+          Hi, I'm 
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[var(--gold)] to-[var(--teal)]">
+            Mehdi Kaidi
+          </span>
+        </h1>
+        <h2 class="text-lg sm:text-xl text-slate-300 font-medium">
+          Building clean, reliable web apps
+        </h2>
+
+        <div class="flex gap-4 pt-4">
+          <a href="#projects" class="px-6 py-2.5 rounded-lg bg-[var(--teal)] text-slate-950 font-medium hover:opacity-90 transition-opacity">
+            View Projects
+          </a>
+          <a href="#contact" class="px-6 py-2.5 rounded-lg border border-white/10 hover:border-[var(--teal)] transition-colors">
+            Get in touch
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Photo with Creative Background (kept from your original code) -->
+      <div class="flex justify-center lg:justify-end">
         <div class="relative">
           <!-- Animated background shapes -->
           <div class="absolute inset-0 w-72 h-72">
-            <!-- Rotating gradient ring -->
             <div class="absolute inset-4 rounded-full border-4 border-gradient-to-r from-[var(--teal)] via-[var(--gold)] to-[var(--straw)] opacity-30 animate-spin" style="animation-duration: 20s;"></div>
-            <!-- Floating particles -->
             <div class="absolute top-8 left-8 w-3 h-3 bg-[var(--gold)] rounded-full opacity-60 animate-pulse"></div>
             <div class="absolute bottom-12 right-6 w-2 h-2 bg-[var(--teal)] rounded-full opacity-80 animate-bounce" style="animation-delay: 1s;"></div>
             <div class="absolute top-20 right-12 w-1.5 h-1.5 bg-[var(--straw)] rounded-full opacity-50 animate-pulse" style="animation-delay: 2s;"></div>
           </div>
-          
+
           <!-- Main photo container with gradient background -->
           <div class="relative w-72 h-72 rounded-2xl overflow-hidden shadow-2xl">
-            <!-- Dynamic gradient background -->
             <div class="absolute inset-0 bg-gradient-to-br from-[var(--ocean)] via-[var(--teal)]/20 to-[var(--gold)]/10"></div>
-            <!-- Code-like pattern overlay -->
             <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(59,163,169,0.3) 10px, rgba(59,163,169,0.3) 11px);"></div>
-            
-            <!-- Your transparent photo -->
+
             <img src="/images/mehdi.png" alt="Mehdi Kaidi" class="relative z-10 w-full h-full object-contain p-4" />
-            
-            <!-- Subtle overlay for depth -->
+
             <div class="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
           </div>
-          
+
           <!-- Floating code elements -->
           <div class="absolute -top-2 -right-4 bg-slate-800/80 rounded px-2 py-1 text-xs text-[var(--teal)] font-mono border border-[var(--teal)]/30">
             &lt;dev/&gt;
@@ -245,33 +262,10 @@
         </div>
       </div>
 
-      <!-- Right: Text Content -->
-      <div class="space-y-6 order-1 lg:order-2">
-        <div>
-          <p class="uppercase tracking-[.2em] text-xs text-slate-400 mb-3">Setting Sail for the Grand Line</p>
-          <h1 class="text-3xl sm:text-5xl font-semibold leading-tight mb-4">
-            Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-[var(--gold)] to-[var(--teal)]">Mehdi Kaidi</span>
-          </h1>
-          <h2 class="text-lg sm:text-xl text-slate-300 font-medium mb-4">
-            Computer Science student building clean, reliable web apps
-          </h2>
-          <p class="text-slate-400 leading-relaxed">
-            Focused on backend/API design, data modeling, and delightful UX. Currently exploring Node.js, Express, MySQL, and system design.
-          </p>
-        </div>
-        
-        <div class="flex flex-wrap gap-3 items-center">
-          <a href="#projects" class="px-6 py-2.5 rounded-lg bg-[var(--teal)] text-slate-950 font-medium hover:opacity-90 transition-opacity">View Projects</a>
-          <a href="#contact" class="px-6 py-2.5 rounded-lg border border-white/10 hover:border-[var(--teal)] transition-colors">Get in touch</a>
-        </div>
-        
-        <div class="pt-2">
-          <span class="chip glow-gum text-sm">"I'm gonna be King of the Developers!"</span>
-        </div>
-      </div>
     </div>
   </div>
 </section>
+
 
   <!-- PROJECTS -->
 <section id="projects" class="max-w-6xl mx-auto px-4 py-16">
