@@ -202,59 +202,132 @@
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="relative">
-    <div class="absolute inset-0 wave-divider pointer-events-none"></div>
-    <div class="max-w-6xl mx-auto px-4 pt-16 pb-20">
-      <p class="uppercase tracking-[.25em] text-xs text-slate-400">Setting Sail for the Grand Line</p>
-      <h1 class="mt-4 text-4xl sm:text-6xl font-semibold leading-tight">
-        Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-[var(--gold)] to-[var(--teal)]">Mehdi Kaidi</span> —
-        a Computer Science student building clean, reliable web apps.
-      </h1>
-      <p class="mt-5 max-w-2xl text-slate-300">
-        Charting routes like a Straw Hat navigator—focused on backend/API design, data modeling, and delightful UX.
-        Currently exploring Node.js, Express, MySQL, and system design.
-      </p>
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href="#projects" class="px-5 py-2 rounded-lg bg-[var(--teal)] text-slate-950 font-medium hover:opacity-90">View Projects</a>
-        <a href="#contact" class="px-5 py-2 rounded-lg border border-white/10 hover:border-[var(--teal)]">Get in touch</a>
-        <span class="chip glow-gum">"I'm gonna be King of the Developers!"</span>
+ <!-- HERO -->
+<!-- HERO -->
+<section class="relative">
+  <div class="absolute inset-0 wave-divider pointer-events-none"></div>
+  <div class="max-w-6xl mx-auto px-4 pt-16 pb-20">
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <!-- Left: Photo with Creative Background -->
+      <div class="flex justify-center lg:justify-end order-2 lg:order-1">
+        <div class="relative">
+          <!-- Animated background shapes -->
+          <div class="absolute inset-0 w-72 h-72">
+            <!-- Rotating gradient ring -->
+            <div class="absolute inset-4 rounded-full border-4 border-gradient-to-r from-[var(--teal)] via-[var(--gold)] to-[var(--straw)] opacity-30 animate-spin" style="animation-duration: 20s;"></div>
+            <!-- Floating particles -->
+            <div class="absolute top-8 left-8 w-3 h-3 bg-[var(--gold)] rounded-full opacity-60 animate-pulse"></div>
+            <div class="absolute bottom-12 right-6 w-2 h-2 bg-[var(--teal)] rounded-full opacity-80 animate-bounce" style="animation-delay: 1s;"></div>
+            <div class="absolute top-20 right-12 w-1.5 h-1.5 bg-[var(--straw)] rounded-full opacity-50 animate-pulse" style="animation-delay: 2s;"></div>
+          </div>
+          
+          <!-- Main photo container with gradient background -->
+          <div class="relative w-72 h-72 rounded-2xl overflow-hidden shadow-2xl">
+            <!-- Dynamic gradient background -->
+            <div class="absolute inset-0 bg-gradient-to-br from-[var(--ocean)] via-[var(--teal)]/20 to-[var(--gold)]/10"></div>
+            <!-- Code-like pattern overlay -->
+            <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(59,163,169,0.3) 10px, rgba(59,163,169,0.3) 11px);"></div>
+            
+            <!-- Your transparent photo -->
+            <img src="/images/mehdi.png" alt="Mehdi Kaidi" class="relative z-10 w-full h-full object-contain p-4" />
+            
+            <!-- Subtle overlay for depth -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
+          </div>
+          
+          <!-- Floating code elements -->
+          <div class="absolute -top-2 -right-4 bg-slate-800/80 rounded px-2 py-1 text-xs text-[var(--teal)] font-mono border border-[var(--teal)]/30">
+            &lt;dev/&gt;
+          </div>
+          <div class="absolute -bottom-3 -left-6 bg-slate-800/80 rounded px-2 py-1 text-xs text-[var(--gold)] font-mono border border-[var(--gold)]/30">
+            { code }
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Text Content -->
+      <div class="space-y-6 order-1 lg:order-2">
+        <div>
+          <p class="uppercase tracking-[.2em] text-xs text-slate-400 mb-3">Setting Sail for the Grand Line</p>
+          <h1 class="text-3xl sm:text-5xl font-semibold leading-tight mb-4">
+            Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-[var(--gold)] to-[var(--teal)]">Mehdi Kaidi</span>
+          </h1>
+          <h2 class="text-lg sm:text-xl text-slate-300 font-medium mb-4">
+            Computer Science student building clean, reliable web apps
+          </h2>
+          <p class="text-slate-400 leading-relaxed">
+            Focused on backend/API design, data modeling, and delightful UX. Currently exploring Node.js, Express, MySQL, and system design.
+          </p>
+        </div>
+        
+        <div class="flex flex-wrap gap-3 items-center">
+          <a href="#projects" class="px-6 py-2.5 rounded-lg bg-[var(--teal)] text-slate-950 font-medium hover:opacity-90 transition-opacity">View Projects</a>
+          <a href="#contact" class="px-6 py-2.5 rounded-lg border border-white/10 hover:border-[var(--teal)] transition-colors">Get in touch</a>
+        </div>
+        
+        <div class="pt-2">
+          <span class="chip glow-gum text-sm">"I'm gonna be King of the Developers!"</span>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- PROJECTS -->
 <section id="projects" class="max-w-6xl mx-auto px-4 py-16">
   <h2 class="text-2xl font-semibold">Projects</h2>
   <p class="text-slate-400 text-sm mt-1">Sélection de projets avec aperçu et détails.</p>
 
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
     <!-- CARD — Suivi médical scolaire -->
     <article class="relative group rounded-xl overflow-hidden border border-white/5 bg-slate-900/40">
       <img src="/images/ehealth/logo.png"
            alt="Suivi médical scolaire — aperçu"
            class="w-full aspect-[16/9] object-cover" />
       <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-      <button class="absolute bottom-3 right-3 inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium
-                     bg-[var(--sand)] text-slate-900 shadow hover:brightness-95 focus:outline-none focus:ring-2 focus:ring-[var(--teal)]"
-              data-open="modal-medical">
-        View
-        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M12.293 2.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L14 5.414V17a1 1 0 11-2 0V5.414L8.707 7.707A1 1 0 117.293 6.293l4-4z"/></svg>
-      </button>
+      <div class="absolute bottom-0 left-0 right-0 p-4">
+        <h3 class="text-lg font-semibold mb-2">Ehealth — Dossier Médical Élève</h3>
+        <!-- <p class="text-slate-300 text-sm mb-3">
+          Application web sécurisée pour centraliser l’historique de santé des élèves (antécédents, examens, vaccinations, allergies, traitements).
+        </p>
+        <div class="flex flex-wrap gap-2 text-xs mb-3">
+          <span class="px-2 py-1 bg-white/5 rounded">php</span>
+          <span class="px-2 py-1 bg-white/5 rounded">d3.js</span>
+          <span class="px-2 py-1 bg-white/5 rounded">Tailwind</span>
+          <span class="px-2 py-1 bg-white/5 rounded">MySQL</span>
+          <span class="px-2 py-1 bg-white/5 rounded">chart.js</span>
+        </div> -->
+        <div class="flex justify-end">
+          <button class="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium
+                         bg-[var(--sand)] text-slate-900 shadow hover:brightness-95 focus:outline-none focus:ring-2 focus:ring-[var(--teal)]"
+                  data-open="modal-medical">
+            View
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M12.293 2.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L14 5.414V17a1 1 0 11-2 0V5.414L8.707 7.707A1 1 0 117.293 6.293l4-4z"/></svg>
+          </button>
+        </div>
+      </div>
     </article>
 
-    <!-- CARD — V2V Simulation -->
+     <!-- CARD — V2V Simulation -->
     <article class="relative group rounded-xl overflow-hidden border border-white/5 bg-slate-900/40">
       <img src="/images/v2v/v2v.png"
            alt="V2V — aperçu"
            class="w-full aspect-[16/9] object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-      <button class="absolute bottom-3 right-3 inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium
-                     bg-[var(--sand)] text-slate-900 shadow hover:brightness-95 focus:outline-none focus:ring-2 focus:ring-[var(--teal)]"
-              data-open="modal-v2v">
-        View
-        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M12.293 2.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L14 5.414V17a1 1 0 11-2 0V5.414L8.707 7.707A1 1 0 117.293 6.293l4-4z"/></svg>
-      </button>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 right-0 p-4">
+        <h3 class="text-lg font-semibold mb-2">V2V Simulation</h3>
+        <!-- <p class="text-slate-300 text-sm mb-3">
+          Simulation C++/Qt des communications inter-véhicules sur Mulhouse.
+        </p> -->
+        <div class="flex justify-end">
+          <button class="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium
+                         bg-[var(--sand)] text-slate-900 shadow hover:brightness-95 focus:outline-none focus:ring-2 focus:ring-[var(--teal)]"
+                  data-open="modal-v2v">
+            View
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M12.293 2.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L14 5.414V17a1 1 0 11-2 0V5.414L8.707 7.707A1 1 0 117.293 6.293l4-4z"/></svg>
+          </button>
+        </div>
+      </div>
     </article>
 
     <!-- CARD — ShareElec -->
@@ -262,14 +335,30 @@
       <img src="/images/shareElec/firstPage.png"
            alt="ShareElec — aperçu"
            class="w-full aspect-[16/9] object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-      <button class="absolute bottom-3 right-3 inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium
-                     bg-[var(--sand)] text-slate-900 shadow hover:brightness-95 focus:outline-none focus:ring-2 focus:ring-[var(--teal)]"
-              data-open="modal-shareelec">
-        View
-        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M12.293 2.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L14 5.414V17a1 1 0 11-2 0V5.414L8.707 7.707A1 1 0 117.293 6.293l4-4z"/></svg>
-      </button>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 right-0 p-4">
+        <h3 class="text-lg font-semibold mb-2">ShareElec</h3>
+        <!-- <p class="text-slate-300 text-sm mb-3">
+          Marketplace d'électricité avec tarification en temps réel.
+        </p>
+        <div class="flex flex-wrap gap-2 text-xs mb-3">
+          <span class="px-2 py-1 bg-white/5 rounded">.NET Core</span>
+          <span class="px-2 py-1 bg-white/5 rounded">Angular</span>
+          <span class="px-2 py-1 bg-white/5 rounded">SQLite</span>
+          <span class="px-2 py-1 bg-white/5 rounded">Tailwind CSS</span>
+          <span class="px-2 py-1 bg-white/5 rounded">JWT Auth</span>
+        </div> -->
+        <div class="flex justify-end">
+          <button class="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium
+                         bg-[var(--sand)] text-slate-900 shadow hover:brightness-95 focus:outline-none focus:ring-2 focus:ring-[var(--teal)]"
+                  data-open="modal-shareelec">
+            View
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M12.293 2.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L14 5.414V17a1 1 0 11-2 0V5.414L8.707 7.707A1 1 0 117.293 6.293l4-4z"/></svg>
+          </button>
+        </div>
+      </div>
     </article>
+
 
     <!-- CARD — Optimisation -->
     <article class="relative group rounded-xl overflow-hidden border border-white/5 bg-slate-900/40">
@@ -277,12 +366,28 @@
            alt="Optimisation — aperçu"
            class="w-full aspect-[16/9] object-cover" />
       <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-      <button class="absolute bottom-3 right-3 inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium
-                     bg-[var(--sand)] text-slate-900 shadow hover:brightness-95 focus:outline-none focus:ring-2 focus:ring-[var(--teal)]"
-              data-open="modal-optimisation">
-        View
-        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M12.293 2.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L14 5.414V17a1 1 0 11-2 0V5.414L8.707 7.707A1 1 0 117.293 6.293l4-4z"/></svg>
-      </button>
+      <div class="absolute bottom-0 left-0 right-0 p-4">
+        <h3 class="text-lg font-semibold mb-2">Optimisation — Résolution de problèmes</h3>
+        <!-- <p class="text-slate-300 text-sm mb-3">
+          Application web pour la résolution de problèmes d'optimisation mathématique. Interface intuitive pour définir les fonctions, contraintes et paramètres, avec visualisation des résultats.
+        </p>
+        <div class="flex flex-wrap gap-2 text-xs mb-3">
+          <span class="px-2 py-1 bg-white/5 rounded">Python</span>
+          <span class="px-2 py-1 bg-white/5 rounded">Flask</span>
+          <span class="px-2 py-1 bg-white/5 rounded">SciPy</span>
+          <span class="px-2 py-1 bg-white/5 rounded">NumPy</span>
+          <span class="px-2 py-1 bg-white/5 rounded">React</span>
+          <span class="px-2 py-1 bg-white/5 rounded">Tailwind CSS</span>
+        </div> -->
+        <div class="flex justify-end">
+          <button class="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium
+                         bg-[var(--sand)] text-slate-900 shadow hover:brightness-95 focus:outline-none focus:ring-2 focus:ring-[var(--teal)]"
+                  data-open="modal-optimisation">
+            View
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M12.293 2.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L14 5.414V17a1 1 0 11-2 0V5.414L8.707 7.707A1 1 0 117.293 6.293l4-4z"/></svg>
+          </button>
+        </div>
+      </div>
     </article>
   </div>
 </section>
@@ -352,13 +457,18 @@
     <div class="p-5 md:p-6 grid md:grid-cols-2 gap-6">
       <div class="space-y-3" data-gallery>
         <div class="relative aspect-video bg-slate-800/40 rounded-lg overflow-hidden">
-          <img data-gallery-main class="h-full w-full object-cover"
-               alt="Captures V2V"
-               src="/images/v2v/V2V.png" />
-          <button class="absolute left-2 top-1/2 -translate-y-1/2 rounded-lg bg-black/40 hover:bg-black/60 p-2" 
+          <video preload="metadata" data-gallery-main class="h-full w-full object-cover" 
+                alt="Captures V2V"
+                src="/images/v2v/v2v.mp4"
+                controls
+                muted
+                loop>
+            Your browser does not support the video tag.
+          </video>
+          <!-- <button class="absolute left-2 top-1/2 -translate-y-1/2 rounded-lg bg-black/40 hover:bg-black/60 p-2" 
                   data-gallery-prev aria-label="Previous">❮</button>
           <button class="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg bg-black/40 hover:bg-black/60 p-2" 
-                  data-gallery-next aria-label="Next">❯</button>
+                  data-gallery-next aria-label="Next">❯</button> -->
         </div>
         <!-- Hidden images for gallery -->
         <div class="hidden">
@@ -818,7 +928,7 @@
       // PROJECTS
       '#projects h2': 'Projects',
       '#projects p.text-slate-400': 'Selected projects with code and live demos.',
-      '#projects article:nth-of-type(1) h3': 'DB Viewer',
+      '#projects article:nth-of-type(1) h3': 'Ehealth',
       '#projects article:nth-of-type(1) p.mt-3': 'Lightweight Express app that exposes REST endpoints and EJS pages for a relational schema.',
       '#projects article:nth-of-type(1) a:hover': 'Live',
       '#projects article:nth-of-type(2) h3': 'MDM Dashboard',
@@ -855,7 +965,7 @@
       // PROJECTS
       '#projects h2': 'Projects',
       '#projects p.text-slate-400': 'Projets sélectionnés avec code et démos.',
-      '#projects article:nth-of-type(1) h3': 'DB Viewer',
+      '#projects article:nth-of-type(1) h3': 'Ehealth',
       '#projects article:nth-of-type(1) p.mt-3': 'App Express légère qui expose des endpoints REST et des pages EJS pour un schéma relationnel.',
       '#projects article:nth-of-type(1) a:hover': 'En ligne',
       '#projects article:nth-of-type(2) h3': 'Tableau de bord MDM',
