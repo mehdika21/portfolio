@@ -289,7 +289,7 @@
 
     <!-- CARD — V2V Simulation -->
     <article class="relative group rounded-xl overflow-hidden border border-white/5 bg-slate-900/40">
-      <img src="/images/v2v/v2v.png" alt="V2V — aperçu" class="w-full aspect-[16/9] object-cover" />
+      <img src="images/v2v/V2V.png" alt="V2V — aperçu" class="w-full aspect-[16/9] object-cover" />
       <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
       <div class="absolute bottom-0 left-0 right-0 p-4">
         <h3 class="text-lg font-semibold mb-2">V2V Simulation</h3>
@@ -393,10 +393,25 @@
     <div class="p-6 md:p-8 grid md:grid-cols-[1.4fr_1fr] gap-8">
       <div class="space-y-4" data-gallery>
         <div class="relative aspect-video rounded-xl overflow-hidden bg-slate-800/40 ring-1 ring-white/10">
-          <img data-thumb data-src="/images/v2v/V2V.png" alt="V2V Simulation Interface">
+          <img
+            data-thumb
+            src="/images/v2v/V2V.png"
+            data-src="/images/v2v/V2V.png"
+            alt="V2V Simulation Interface"
+            loading="lazy"
+            class="w-full h-full object-cover"
+            width="1280" height="720"
+          >
         </div>
+
         <div class="hidden">
-          <img data-thumb data-src="/images/v2v/V2V.png" alt="V2V Simulation Interface">
+          <img
+            data-thumb
+            src="/images/v2v/V2V.png"
+            data-src="/images/v2v/V2V.png"
+            alt="V2V Simulation Interface"
+            width="1280" height="720"
+          >
         </div>
       </div>
 
@@ -423,6 +438,7 @@
     </div>
   </div>
 </div>
+
 
 <!-- ShareElec -->
 <div id="modal-shareelec" class="fixed inset-0 z-50 hidden flex items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="modal-shareelec-title">
