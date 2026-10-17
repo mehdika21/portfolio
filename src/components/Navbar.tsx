@@ -13,6 +13,7 @@ const Navbar: React.FC = () => (
       </div>
       {/* Center - Navigation menu */}
       <div className="hidden md:flex items-center gap-8">
+        <a href="#experience" className="text-sm text-slate-300 hover:text-teal transition-colors font-medium">Experience</a>
         <a href="#projects" className="text-sm text-slate-300 hover:text-teal transition-colors font-medium">Projects</a>
         <a href="#skills" className="text-sm text-slate-300 hover:text-teal transition-colors font-medium">Skills</a>
         <a href="#contact" className="text-sm text-slate-300 hover:text-teal transition-colors font-medium">Contact</a>
